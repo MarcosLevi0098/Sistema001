@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
+use factory\ProdutosFactory;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
        $this->call([
         //UsersSeeder::class,
         //CategoriasSeeder::class,
-        ProdutosSeeder::class
+        ProdutosSeeder::class,
     ]);
 }
 }
