@@ -2,3 +2,5 @@
 
 {{-- ISSO É UM COMENTARIO --}}
 {{-- COMENTARIOS NO BLADE NÃO SÃO COMENTADOS --}}
+
+Meu nome é {{$nome}}, e minha idade é {{$idade}}
