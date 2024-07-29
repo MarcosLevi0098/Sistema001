@@ -26,7 +26,7 @@
         <li><a href="" class="dropdown-trigger" data-target="dropdown1">Categorias <i class="material-icons right">expand_more</i></a></li>
       </ul>
       <ul id="nav-mobile" class="right">
-        <li><a href="{{route('site/login')}}">Login</a></li>
+        <li><a href="">Login</a></li>
       </ul>
     </div>
   </nav>
