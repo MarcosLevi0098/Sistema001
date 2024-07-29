@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\LoginController;
 
 
 Route::resource("produto", ProdutosController::class);
@@ -22,4 +22,4 @@ Route::post('/atualizar',[CarrinhoController::class, 'atualizarCarrinho'])->name
 Route::get('limpar', [CarrinhoController::class, 'LimparCarrinho'])->name('site/limparcarrinho');
 
 Route::view('/login', 'login/form')->name('login/form');
-Route::post('/auth')
+Route::post('/auth', [LoginController::class, 'auth'])->name('login/auth');

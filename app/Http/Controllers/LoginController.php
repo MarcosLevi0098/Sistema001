@@ -9,8 +9,16 @@ class LoginController extends Controller
     public function auth(Request $request){
         $credenciais = $request->validate([
             'email' => ['required', 'email'],
-            'password' => ['required']
-        ]);
+            'password' => ['required'],
+            
+        ],
+        [
+            'email/required' =>'O campo email é obrigatório!',
+            'email/email' => 'O campo email não é valido!',
+            'password/required'=>'O campo senha é obrigatório!',
+            'password/password' => 'O campo senha não é valido!'
+        ]
+    );
         if(Auth::attempt($credenciais)){
             $request->session()->regenerate();
             return redirect()->intended('dashboard');
