@@ -12,9 +12,9 @@ class ProdutosController extends Controller
      */
     public function index()
     {
-        $produtos = Produtos::paginate(3);
+        $produtos = Produtos::paginate(5);
     
-        return view('site/home', compact('produtos'));
+        return view('admin/produtos', compact('produtos'));
     }
 
     /**

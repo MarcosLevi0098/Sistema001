@@ -2,7 +2,7 @@
 @section('title', 'CARRINHO')
 @section('conteudo')
 
-<div class="row container">
+<div class="row container" style="flex: 1 0 auto;" >
 
   @if ($mensagen = Session::get('Sucesso'))    
   
@@ -88,9 +88,6 @@
     </div>
     @endif
     
-   
-    
-    
    <div class="rowc container center"></div>
 
    <a href="{{route('site/index')}}" class="btn-large waves-effect waves-light blue">Continuar comprando<i class="material-icons left">arrow_back</i></a>
@@ -98,5 +95,5 @@
    <a href="{{route('site/limparcarrinho')}}" class="btn-large waves-effect waves-light blue">Limpar carrinho<i class="material-icons right">clear</i></a> 
    <button class="btn-large waves-effect waves-light green">Finalizar pedido<i class="material-icons right">check</i></button>   
    </div>
-
+</div>
 @endsection

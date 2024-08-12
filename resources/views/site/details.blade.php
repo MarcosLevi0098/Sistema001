@@ -22,4 +22,5 @@
         <input type="hidden" name="img" value="{{$produtos->imagem}}">
         <button class="btn orange btn-large">Comprar</button>
     </div>
+</div>
 @endsection

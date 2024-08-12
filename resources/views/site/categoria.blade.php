@@ -2,7 +2,7 @@
 @section('title', 'CATEGORIAS')
 @section('conteudo')
 
-<div class="row container">
+ <div class="row container " style="">
 
     <h5>Categoria: {{$categoria->nome}} </h5>
     @foreach ($produtos as $produto)
@@ -22,7 +22,6 @@
     @endforeach
 </div>
 <div class="row center">
-    {{$produtos->links('custom/pagination')}}
+  {{$produtos->links('custom/pagination')}}
 </div>
-
 @endsection

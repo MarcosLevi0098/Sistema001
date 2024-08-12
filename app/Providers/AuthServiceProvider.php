@@ -4,7 +4,9 @@ namespace App\Providers;
 
 // use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-
+use App\Models\User;
+use App\Models\produtos;
+use Illuminate\Support\Facades\Gate;
 class AuthServiceProvider extends ServiceProvider
 {
     /**
@@ -13,14 +15,18 @@ class AuthServiceProvider extends ServiceProvider
      * @var array<class-string, class-string>
      */
     protected $policies = [
-        //
+        'App\Models\produtos' => 'App\Policies\ProdutoPolicy',
     ];
 
     /**
      * Register any authentication / authorization services.
      */
-    public function boot(): void
+    public function boot()
     {
-        //
+        $this->registerPolicies();
+        Gate::define('ver-produto', function(User $user, produtos $produto){
+            return $user->id === $produto->id_user; 
+        });
     }
+
 }
